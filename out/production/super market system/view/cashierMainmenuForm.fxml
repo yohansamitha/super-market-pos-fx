@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.cashierMainmenuControl">
+   <children>
+      <ImageView layoutX="352.0" layoutY="85.0" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="352.0" AnchorPane.topAnchor="85.0">
+         <image>
+            <Image url="@../images/icons8-accountant-96.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="221.0" layoutY="89.0">
+         <image>
+            <Image url="@../images/icons8-order-history2-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="536.0" layoutY="89.0">
+         <image>
+            <Image url="@../images/icons8-add-user-male-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="77.0" layoutY="89.0">
+         <image>
+            <Image url="@../images/icons8-create-order-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="665.0" layoutY="89.0">
+         <image>
+            <Image url="@../images/icons8-list-64.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="85.0" prefWidth="800.0" />
+      <Pane prefHeight="85.0" prefWidth="800.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label layoutX="281.0" layoutY="44.0" text="wholesale distributor">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="332.0" layoutY="5.0" text="Welcome to">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateTime" layoutX="632.0" layoutY="33.0" prefHeight="21.0" prefWidth="136.0" />
+            <Label layoutX="632.0" layoutY="53.0" text="cashier">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="221.0" layoutY="311.0" text="Up to your standard">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="356.0" text="Eat the best">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="72.0" layoutY="153.0" onAction="#btnNewOrder" text="New Order" />
+      <JFXButton layoutX="209.0" layoutY="153.0" onAction="#btnOrderHistory" text="Order History" />
+      <JFXButton layoutX="512.0" layoutY="153.0" onAction="#btnRegCustomer" text="Register Customer" />
+      <JFXButton layoutX="672.0" layoutY="153.0" onAction="#btnItems" prefHeight="25.0" prefWidth="49.0" text="Items" />
+      <Separator layoutY="180.0" prefWidth="800.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="385.0" prefWidth="414.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.RegisterCustomerControl">
+   <children>
+      <JFXComboBox fx:id="comboTitle" layoutX="154.0" layoutY="99.0" prefHeight="25.0" prefWidth="65.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Mr." />
+                  <String fx:value="Mrs." />
+                  <String fx:value="Ms." />
+              </FXCollections>
+          </items>
+      </JFXComboBox>
+      <Label layoutX="33.0" layoutY="104.0" text="Customer Name" />
+      <JFXTextField fx:id="txtCusName" layoutX="222.0" layoutY="99.0" prefHeight="25.0" prefWidth="158.0" promptText="Select Title and enter Name" />
+      <Label layoutX="33.0" layoutY="142.0" text="Customer Address" />
+      <JFXTextField fx:id="txtCusAddress" layoutX="153.0" layoutY="138.0" prefHeight="25.0" prefWidth="228.0" />
+      <Label layoutX="33.0" layoutY="178.0" prefHeight="17.0" prefWidth="105.0" text="City" />
+      <JFXTextField fx:id="txtCity" layoutX="153.0" layoutY="174.0" prefHeight="25.0" prefWidth="228.0" />
+      <Label layoutX="33.0" layoutY="214.0" prefHeight="17.0" prefWidth="105.0" text="province" />
+      <JFXTextField fx:id="txtProvince" layoutX="153.0" layoutY="210.0" prefHeight="25.0" prefWidth="228.0" />
+      <Label layoutX="33.0" layoutY="250.0" prefHeight="17.0" prefWidth="105.0" text="postal code" />
+      <JFXTextField fx:id="txtPostalCode" layoutX="153.0" layoutY="246.0" prefHeight="25.0" prefWidth="228.0" />
+      <Pane prefHeight="68.0" prefWidth="414.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label layoutX="90.0" layoutY="19.0" prefHeight="20.0" prefWidth="220.0" text="Customer Registration">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton layoutX="240.0" layoutY="303.0" onAction="#btnCreate" text="Create" />
+      <JFXButton layoutX="307.0" layoutY="303.0" onAction="#btnCancel" text="Cancel" />
+   </children>
+</AnchorPane>

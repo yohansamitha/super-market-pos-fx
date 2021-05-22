@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.OrderHistoryControl">
+   <children>
+      <ImageView layoutX="353.0" layoutY="4.0">
+         <image>
+            <Image url="@../images/icons8-accountant-96.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="222.0" layoutY="8.0">
+         <image>
+            <Image url="@../images/icons8-order-history2-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="537.0" layoutY="8.0">
+         <image>
+            <Image url="@../images/icons8-add-user-male-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="78.0" layoutY="8.0">
+         <image>
+            <Image url="@../images/icons8-create-order-64.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="666.0" layoutY="8.0">
+         <image>
+            <Image url="@../images/icons8-list-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="73.0" layoutY="72.0" onAction="#btnNewOrder" text="New Order" />
+      <JFXButton layoutX="210.0" layoutY="72.0" onAction="#btnOrderHistory" text="Order History" />
+      <JFXButton layoutX="513.0" layoutY="72.0" onAction="#btnRegCustomer" text="Register Customer" />
+      <JFXButton layoutX="673.0" layoutY="72.0" onAction="#btnItems" prefHeight="25.0" prefWidth="49.0" text="Items" />
+      <Separator layoutX="1.0" layoutY="103.0" prefWidth="800.0" />
+      <TableView fx:id="tblOrderHistory" layoutX="218.0" layoutY="151.0" onMouseReleased="#selectUpdateItem" prefHeight="351.0" prefWidth="559.0">
+         <columns>
+            <TableColumn fx:id="orderID" prefWidth="66.0" text="Order ID" />
+            <TableColumn fx:id="itemCode" prefWidth="72.0" text="itemCode" />
+            <TableColumn fx:id="description" prefWidth="104.0" text="Description" />
+            <TableColumn fx:id="packSize" prefWidth="66.0" text="packSize" />
+            <TableColumn fx:id="unitPrice" prefWidth="69.0" text="unitPrice" />
+            <TableColumn fx:id="discount" prefWidth="64.0" text="Discount" />
+            <TableColumn fx:id="qty" prefWidth="58.0" text="qty" />
+            <TableColumn fx:id="price" prefWidth="58.0" text="Price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="orderTable" layoutX="37.0" layoutY="151.0" onMouseReleased="#getSelectedOrder" prefHeight="394.0" prefWidth="134.0">
+        <columns>
+          <TableColumn fx:id="MainOrderID" prefWidth="132.0" text="Order" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="569.0" layoutY="533.0" onAction="#btnUpdateOrder" text="Update Order" />
+      <JFXButton layoutX="680.0" layoutY="533.0" onAction="#btnCancel" text="Cancel" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ItemsControl">
+    <children>
+        <ImageView layoutX="352.0" layoutY="4.0" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="352.0" AnchorPane.topAnchor="4.0">
+            <image>
+                <Image url="@../images/icons8-accountant-96.png" />
+            </image>
+        </ImageView>
+        <ImageView layoutX="221.0" layoutY="8.0">
+            <image>
+                <Image url="@../images/icons8-order-history2-64.png" />
+            </image>
+        </ImageView>
+        <ImageView layoutX="536.0" layoutY="8.0">
+            <image>
+                <Image url="@../images/icons8-add-user-male-64.png" />
+            </image>
+        </ImageView>
+        <ImageView layoutX="77.0" layoutY="8.0">
+            <image>
+                <Image url="@../images/icons8-create-order-64.png" />
+            </image>
+        </ImageView>
+        <ImageView layoutX="665.0" layoutY="8.0">
+            <image>
+                <Image url="@../images/icons8-list-64.png" />
+            </image>
+        </ImageView>
+        <JFXButton layoutX="72.0" layoutY="72.0" onAction="#btnNewOrder" text="New Order" />
+        <JFXButton layoutX="209.0" layoutY="72.0" onAction="#btnOrderHistory" text="Order History" />
+        <JFXButton layoutX="512.0" layoutY="72.0" onAction="#btnRegCustomer" text="Register Customer" />
+        <JFXButton layoutX="672.0" layoutY="72.0" onAction="#btnItems" prefHeight="25.0" prefWidth="49.0" text="Items" />
+        <Separator layoutY="103.0" prefWidth="800.0" />
+      <JFXTextField fx:id="txtSearch" layoutX="255.0" layoutY="134.0" onKeyReleased="#realTimeSearch" prefHeight="25.0" prefWidth="220.0" />
+      <JFXButton layoutX="493.0" layoutY="134.0" onAction="#btnSearch" text="Search" />
+      <TableView fx:id="itemTable" layoutX="70.0" layoutY="189.0" prefHeight="373.0" prefWidth="660.0">
+        <columns>
+          <TableColumn fx:id="itemCode" prefWidth="132.0" text="Item Code" />
+          <TableColumn fx:id="Description" prefWidth="132.0" text="Description" />
+          <TableColumn fx:id="packSize" prefWidth="132.0" text="pack Size" />
+          <TableColumn fx:id="unitPrice" prefWidth="132.0" text="unit Price" />
+          <TableColumn fx:id="qtyOnHand" prefWidth="132.0" text="Qty On Hand" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
